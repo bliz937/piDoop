@@ -1,6 +1,7 @@
 # Minimum requirements
 
 The list below is a must have per pi.
+The Other section is a general requirment.
 
 ### Hardware
 
