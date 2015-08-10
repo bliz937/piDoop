@@ -6,7 +6,7 @@ This log should be considered easy for anyone to follow.
 
 Feel free to point out mistakes in the [issues](https://github.com/bliz937/piDoop/issues/new) section or contribute by making a pull request.
 
-Log starting point: [link](https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/README.md)
+[next ->](https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/README.md)
 
 ---
 

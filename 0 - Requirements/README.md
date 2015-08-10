@@ -31,5 +31,8 @@ The [Other](https://github.com/bliz937/piDoop/tree/master/0%20-%20Requirements#o
 
 # Our hardware
 
-<a href="https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/images/photo193116109634906126.jpg"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/0%20-%20Requirements/images/photo193116109634906126.jpg" alt="Raspberry pi model B" width="350px" /></a>
-<a href="https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/images/photo193116109634906125.jpg"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/0%20-%20Requirements/images/photo193116109634906125.jpg" alt="class 4 micro sd memory card" width="250px" /></a> <a href="https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/images/photo193116109634906127.jpg"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/0%20-%20Requirements/images/photo193116109634906127.jpg" alt="Raspberry pi 5V power supply" width="250px" /></a>
+<a href="https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/images/photo193116109634906127.jpg"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/0%20-%20Requirements/images/photo193116109634906127.jpg" alt="Raspberry pi 5V power supply" width="250px" /></a><a href="https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/images/photo193116109634906126.jpg"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/0%20-%20Requirements/images/photo193116109634906126.jpg" alt="Raspberry pi 2 model B" width="400px" /></a>
+<a href="https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/images/photo193116109634906125.jpg"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/0%20-%20Requirements/images/photo193116109634906125.jpg" alt="Verbatim 8gb class 4 micro sd memory card" width="250px" /></a>
+
+---
+[<- prev](https://github.com/bliz937/piDoop) | [next ->](https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/README.md)
