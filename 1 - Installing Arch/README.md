@@ -9,20 +9,6 @@ If you are not using a virtual machine, you can ignore the steps that have VM in
 
 We will not cover installing Ubuntu in a virtual machine, for that you can follow this guide: [link](https://askubuntu.com/questions/142549/how-to-install-ubuntu-on-virtualbox)
 
-### Configure VM network
-
-Once the VM has started, in the bottom right of the VM, right click on the network icon.
-
-<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/1.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/1.png" alt="Virtual box network icon" align="middle" /></a>
-
-<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/2.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/2.png" alt="Virtual box opening network configuration" align="middle" /></a>
-
-The network configuration panel will open. To make things simple, make sure that the *Enable Network Adapter* check box is enabled and that the *Attached to* option is set to **NAT**
-
-<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/3.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/3.png" alt="Virtual box network attached to NAT" align="middle" /></a>
-
-Simply click the *OK* button to save the changes.
-
 #### Accessing the micro sd card from the VM
 
 If you are using a VM, you will need to manually add the card to the VM. The following is taken from [www.sandyscott.net](http://www.sandyscott.net/2013/08/14/virtualbox-direct-drive-access/)
@@ -91,6 +77,20 @@ You should now see two drives.
 
 Click *ok* to close the settings window and click start on your VM to launch it.
 
+### Configure VM network
+
+Once the VM has started, in the bottom right of the VM, right click on the network icon.
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/1.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/1.png" alt="Virtual box network icon" align="middle" /></a>
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/2.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/2.png" alt="Virtual box opening network configuration" align="middle" /></a>
+
+The network configuration panel will open. To make things simple, make sure that the *Enable Network Adapter* check box is enabled and that the *Attached to* option is set to **NAT**
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/3.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/3.png" alt="Virtual box network attached to NAT" align="middle" /></a>
+
+Simply click the *OK* button to save the changes.
+
 ### root shell
 
 In Ubuntu, open up a shell, this can usually be done by pressing *ctrl*+*alt*+*t* on the desktop.
@@ -121,6 +121,131 @@ We are using an 8gb mirco sd card. As we can see from the image, the path to the
 
 <a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/14.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/14.png" alt="Linux fdisk -l" align="middle" /></a>
 
+Next, run **fdisk** on the path.
+
+```bash
+fdisk /dev/sdb
+```
+
+We will now delete everything on the sd card and create our own partitions.
+
+Type in the following:
+
+```
+o
+```
+
+to delete all partitions on the card.
+
+```
+n
+```
+
+to create a new partition.
+
+```
+p
+```
+
+to create a primary partition.
+
+```
+1
+```
+
+to select the first partition on the drive.
+
+Simply press enter to accept the first sector.
+
+```
++100M
+```
+
+for the last sector.
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/15.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/15.png" alt="Linux fdisk delete and create partitions" align="middle" /></a>
+
+```
+t
+```
+
+to change the partition type.
+
+```
+c
+```
+
+to set the partition to W95 FAT32 (LBA).
+
+```
+n
+```
+
+to create another partition.
+
+```
+p
+```
+
+to create a primary partition.
+
+```
+2
+```
+
+to select partition number.
+
+Press enter twice to select the default start and last sectors.
+
+```
+w
+```
+
+to write the changes.
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/16.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/16.png" alt="Linux fdisk delete and create partitions, set partition type" align="middle" /></a>
+
+```bash
+mkfs.vfat /dev/sdb1
+mkdir boot
+mount /dev/sdX1 boot
+```
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/17.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/17.png" alt="Linux create FAT file system" align="middle" /></a>
+
+```bash
+mkfs.ext4 /dev/sdX2
+mkdir root
+mount /dev/sdX2 root
+```
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/18.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/18.png" alt="Linux create ext4 file system" align="middle" /></a>
+
+Download the Arch Linux archive
+
+```bash
+wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz
+```
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/19.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/19.png" alt="Downloading Arch Linux ARM" align="middle" /></a>
+
+Update your repositories and install **bsdtar**
+
+```bash
+apt-get update
+apt-get install -y bsdtar
+```
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/20.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/20.png" alt="Installing bsdtar" align="middle" /></a>
+
+Extract the *ArchLinuxARM-rpi-2-latest.tar.gz* with *bsdtar*, move the boot contents and unmount the partitions.
+
+```bash
+bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
+sync
+mv root/boot/* boot
+umount boot root
+```
 
 
 ---
