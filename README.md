@@ -4,9 +4,9 @@ This repository is a log of [@psyklone](https://github.com/psyklone) and [@bliz9
 
 This log should be considered easy for anyone to follow.
 
-Feel free to point out mistakes in the [issues](https://github.com/bliz937/piDoop/issues/new) section or contribute by making a pull request.
+Feel free to point out mistakes, or ambiguity, in the [issues](https://github.com/bliz937/piDoop/issues/new) section or contribute by making a [pull request](https://guides.github.com/activities/forking).
 
-[next ->](https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/README.md)
+[next >>](https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/README.md#minimum-requirements)
 
 ---
 
