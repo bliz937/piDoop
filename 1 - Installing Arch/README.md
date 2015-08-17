@@ -208,15 +208,15 @@ to write the changes.
 ```bash
 mkfs.vfat /dev/sdb1
 mkdir boot
-mount /dev/sdX1 boot
+mount /dev/sdb1 boot
 ```
 
 <a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/17.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/17.png" alt="Linux create FAT file system" align="middle" /></a>
 
 ```bash
-mkfs.ext4 /dev/sdX2
+mkfs.ext4 /dev/sdb2
 mkdir root
-mount /dev/sdX2 root
+mount /dev/sdb2 root
 ```
 
 <a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/18.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/18.png" alt="Linux create ext4 file system" align="middle" /></a>
@@ -247,9 +247,10 @@ mv root/boot/* boot
 umount boot root
 ```
 
+If you get an error from *bsdtar*, make sure the archive is properly downloaded.
 
 ---
 
-[<< prev](https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/README.md#minimum-requirements) | [next >>]()
+[<< prev](https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/README.md#minimum-requirements) | [next >>](https://github.com/bliz937/piDoop/blob/master/2%20-%20Initial%20Boot/README.md#initial-boot)
 
 [1]: https://en.wikipedia.org/wiki/Category:Ubuntu_(operating_system)_derivatives

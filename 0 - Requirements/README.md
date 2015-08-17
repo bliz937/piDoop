@@ -15,6 +15,7 @@ The [Other](https://github.com/bliz937/piDoop/tree/master/0%20-%20Requirements#o
 ### Software
 
 * [Arch Linux ARM](http://archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz)
+* bsdtar
 
 ### Other
 
