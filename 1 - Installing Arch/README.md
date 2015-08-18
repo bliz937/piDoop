@@ -219,6 +219,8 @@ mkdir root
 mount /dev/sdb2 root
 ```
 
+If you get an error in Virtual Box, try enabling *use host I/O cache*: [link](https://superuser.com/questions/891667/verr-access-denied-error-with-virutalised-existing-linux-partition)
+
 <a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/18.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/18.png" alt="Linux create ext4 file system" align="middle" /></a>
 
 Download the Arch Linux archive
@@ -240,14 +242,22 @@ apt-get install -y bsdtar
 
 Extract the *ArchLinuxARM-rpi-2-latest.tar.gz* with *bsdtar*, move the boot contents and unmount the partitions.
 
+If you get an error from *bsdtar*, make sure the archive is properly downloaded. To do so, download the md5 checksum and compare it with your local copy.
+
+```bash
+wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-2-latest.tar.gz.md5
+md5sum ArchLinuxARM-rpi-2-latest.tar.gz
+cat ArchLinuxARM-rpi-2-latest.tar.gz.md5
+```
+
+<a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/21.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/21.png" alt="Installing bsdtar" align="middle" /></a>
+
 ```bash
 bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
 sync
 mv root/boot/* boot
 umount boot root
 ```
-
-If you get an error from *bsdtar*, make sure the archive is properly downloaded.
 
 ---
 
