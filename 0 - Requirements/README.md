@@ -26,6 +26,7 @@ The [Other](https://github.com/bliz937/piDoop/tree/master/0%20-%20Requirements#o
 * Local DNS server (ADSL routers have a DNS server built in) - not a must
 * DHCP server (Same as with DNS) - not a must
 * Windows machine
+* SSH client ([putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) for Windows)
 
 # Optional requirements
 

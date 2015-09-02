@@ -252,6 +252,8 @@ cat ArchLinuxARM-rpi-2-latest.tar.gz.md5
 
 <a href="https://github.com/bliz937/piDoop/blob/master/1%20-%20Installing%20Arch/images/21.png"><img src="https://raw.githubusercontent.com/bliz937/piDoop/master/1%20-%20Installing%20Arch/images/21.png" alt="Installing bsdtar" align="middle" /></a>
 
+As you can see above, the two checksum's are the same, indicating that we have a good copy from the Arch servers.
+
 ```bash
 bsdtar -xpf ArchLinuxARM-rpi-2-latest.tar.gz -C root
 sync
