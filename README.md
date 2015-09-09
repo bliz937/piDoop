@@ -6,6 +6,8 @@ This log should be considered easy for anyone to follow.
 
 Feel free to point out mistakes, or ambiguity, in the [issues](https://github.com/bliz937/piDoop/issues/new) section or contribute by making a [pull request](https://guides.github.com/activities/forking).
 
+If you find that there are images not loading, simply reload the page.
+
 Note: This documentation is still on going and is not yet complete.
 
 [next >>](https://github.com/bliz937/piDoop/blob/master/0%20-%20Requirements/README.md#minimum-requirements)
